@@ -1,0 +1,18 @@
+Pseudocódigo pig latin
+
+Script: Single word converter to Pig Latin
+
+PRIMER PSEUDOCODIGO
+GET a word from user input
+IF the word starts with a vowel, add "way" to the end
+ELSE replace the word with its pig latin equivalent
+  GET all of the consonants before the first vowel in the word
+  SET the consonants at the end of the word and add "ay"
+ENDIF
+RETURN the pig-latin word
+
+SEGUNDO PSEUDOCODIGO
+GET a sentence from the user
+DECOMPOSE the sentence in an array of words
+APPLY pig-latin method for all the elements of the array created
+RETURN the sentence "pig-latined"
