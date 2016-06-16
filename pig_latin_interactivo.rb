@@ -1,21 +1,21 @@
-str = ARGV.inspect
+sentence = STDIN
   
-  def pig_latin_word(str)
-    vowels =["a", "e", "i", "o", "u"]
-    str.downcase!
-    s = str.split("")
-    if vowels.include?(s[0]) 
-      (s<<"way").join
-    else 
-      i = 0
-      while vowels.include?(s[i])==false
-        s<<s[i]
-        s[i] = nil
-        i += 1
+  vowels =["a", "e", "i", "o", "u"]
+  s = sentence.split(" ")
+  r = s.map do |word|
+        word.downcase!
+        s_s = word.split("")
+        if vowels.include?(s_s[0]) 
+          (s_s<<"way").join
+        else 
+          i = 0
+          while vowels.include?(s_s[i])==false
+            s_s<<s_s[i]
+            s_s[i] = nil
+            i += 1
+          end
+          (s_s<<"ay").join
+        end
       end
-      (s<<"ay").join
-    end 
-
-  s = str.split(" ")
-  r = s.map{|word| (word == " ")? " " : pig_latin_word(word) + " "}
-  r = r.join 
+  r = r.map{|word| (word == " ")? " " : word + " "}.join
+  puts r
