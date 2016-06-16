@@ -1,3 +1,8 @@
+user = ARGV.first
+prompt = '> '
+puts "Hi #{user}, I'm the #{$0} script."
+puts "I'd like to ask you, what do you want to translate to pig-latin?"
+print prompt
 sentence = STDIN
   
   vowels =["a", "e", "i", "o", "u"]
