@@ -3,7 +3,7 @@ prompt = '> '
 puts "Hi #{user}, I'm the #{$0} script."
 puts "I'd like to ask you, what do you want to translate to pig-latin?"
 print prompt
-sentence = STDIN
+sentence = STDIN.gets.chomp
   
   vowels =["a", "e", "i", "o", "u"]
   s = sentence.split(" ")
